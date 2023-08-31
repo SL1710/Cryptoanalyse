@@ -19,11 +19,18 @@ def encode_image(image_path):
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
+script_directory = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_directory)
+
+current_folder = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(current_folder, '../data/merged_data_3008.csv')
+logos_folder = os.path.join(current_folder, '../logos/')
+
 # Data
-df = pd.read_csv('/Users/simonlanger/Sommersemester23/Cryptoanalyse/data/merged_data_3008.csv')
+df = pd.read_csv(data_path)
 
 # Definiere den Pfad zum Ordner mit den Logos
-logos_folder = "/Users/simonlanger/Sommersemester23/Cryptoanalyse/logos"
+logos_folder = "../logos"
 
 # Liste der Logos-Dateinamen
 logos = [
