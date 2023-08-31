@@ -20,10 +20,10 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 # Data
-df = pd.read_csv('/Users/simonlanger/Sommersemester23/Cryptoanalyse/merged_data_3008.csv')
+df = pd.read_csv('/Users/simonlanger/Sommersemester23/Cryptoanalyse/data/merged_data_3008.csv')
 
 # Definiere den Pfad zum Ordner mit den Logos
-logos_folder = "/Users/simonlanger/Sommersemester23/Cryptoanalyse/Logos"
+logos_folder = "/Users/simonlanger/Sommersemester23/Cryptoanalyse/logos"
 
 # Liste der Logos-Dateinamen
 logos = [
